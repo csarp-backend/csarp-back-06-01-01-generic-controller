@@ -47,7 +47,7 @@ namespace Kreta.Backend.Extensions
             services.AddScoped<TeacherAssambler>();
             services.AddScoped<GradeAssambler>();
             services.AddScoped<ParentAssambler>();
-            services.AddScoped<TeacherAssambler>();
+            services.AddScoped<StudentAssambler>();
             services.AddScoped<SubjectAssambler>();
         }
     }
