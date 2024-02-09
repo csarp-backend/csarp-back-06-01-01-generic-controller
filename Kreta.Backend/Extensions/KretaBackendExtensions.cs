@@ -45,6 +45,10 @@ namespace Kreta.Backend.Extensions
         public static void ConfigureAssamblers(this IServiceCollection services)
         {
             services.AddScoped<TeacherAssambler>();
+            services.AddScoped<GradeAssambler>();
+            services.AddScoped<ParentAssambler>();
+            services.AddScoped<TeacherAssambler>();
+            services.AddScoped<SubjectAssambler>();
         }
     }
 }

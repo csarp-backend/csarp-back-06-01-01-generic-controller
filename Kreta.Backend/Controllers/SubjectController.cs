@@ -8,9 +8,9 @@ namespace Kreta.Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class StudentController : BaseController<Student, StudentDto>
+    public class SubjectController : BaseController<Subject, SubjectDto>
     {
-        public StudentController(StudentAssambler assembler, IStudentRepo repo) : base(assembler, repo)
+        public SubjectController(SubjectAssambler assembler, ISubjectRepo repo) : base(assembler, repo)
         {
         }
     }
