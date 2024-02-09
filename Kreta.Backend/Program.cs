@@ -15,6 +15,8 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureInMemoryContext();
 // Repo konfigurálás
 builder.Services.ConfigureRepoService();
+// Assamblerek konfigurálása
+builder.Services.ConfigureAssamblers();
 
 var app = builder.Build();
 
