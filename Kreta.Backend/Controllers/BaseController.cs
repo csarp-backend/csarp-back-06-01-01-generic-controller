@@ -9,12 +9,12 @@ namespace Kreta.Backend.Controllers
         where Tmodel : class, new()
         where TDto : class,new()
     {
-        private Assambler<Tmodel,TDto> _assembler;
+        private Assambler<Tmodel,TDto> _assambler;
         private IRepositoryBase<Tmodel> _repo;
 
         public BaseController(Assambler<Tmodel, TDto> assembler, IRepositoryBase<Tmodel> repo)
         {
-            _assembler = assembler;
+            _assambler = assembler;
             _repo = repo;
         }
 
@@ -26,7 +26,7 @@ namespace Kreta.Backend.Controllers
             if (_repo != null)
             {
                 entities = await _repo.FindAll().ToListAsync();
-                return Ok(entities.Select(entity =>  _assembler.ToDto(entity)));
+                return Ok(entities.Select(entity =>  _assambler.ToDto(entity)));
             }
             return BadRequest("Az adatok elérhetetlenek!");
         }
